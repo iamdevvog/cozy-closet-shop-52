@@ -28,7 +28,7 @@ export function ProductCard({ p }: { p: ProductCardData }) {
           {formatPrice(p.price_cents)}
         </span>
       </div>
-      <div className="eyebrow mt-1">{p.category === "tshirt" ? "T-shirt" : "Shirt"}</div>
+      <div className="eyebrow mt-1">{p.category === "tshirt" ? "T-shirt" : p.category === "shirt" ? "Shirt" : p.category === "shoes" ? "Shoes" : p.category === "jeans" ? "Jeans" : p.category}</div>
     </Link>
   );
 }

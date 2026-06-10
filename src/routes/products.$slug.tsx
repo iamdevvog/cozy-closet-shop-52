@@ -66,7 +66,7 @@ function ProductPage() {
             <img src={img} alt={product.name} className="h-full w-full object-cover" />
           </div>
           <div className="md:pl-6">
-            <div className="eyebrow">{product.category === "tshirt" ? "T-shirt" : "Shirt"}</div>
+            <div className="eyebrow">{product.category === "tshirt" ? "T-shirt" : product.category === "shirt" ? "Shirt" : product.category === "shoes" ? "Shoes" : product.category === "jeans" ? "Jeans" : product.category}</div>
             <h1 className="font-display mt-2 text-4xl md:text-5xl">{product.name}</h1>
             <div className="mt-3 text-lg tabular-nums">{formatPrice(product.price_cents)}</div>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
