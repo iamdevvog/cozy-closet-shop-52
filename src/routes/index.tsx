@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "styles. — quiet essentials" },
-      { name: "description", content: "Premium t-shirts and shirts. Quiet essentials made to last. Sign in to place an order." },
+      { name: "description", content: "Premium t-shirts, shirts, shoes, and jeans. Quiet essentials made to last. Sign in to place an order." },
     ],
   }),
   component: Index,
@@ -42,7 +42,7 @@ function Index() {
               Quiet essentials,<br/>built to outlast<br/>the season.
             </h1>
             <p className="mt-6 max-w-md text-base text-muted-foreground">
-              Considered cuts in heavyweight cotton and European linen. Made in small runs, shipped from our studio.
+              Considered cuts in heavyweight cotton, European linen, premium leather, and Japanese denim. Made in small runs, shipped from our studio.
             </p>
             <div className="mt-8 flex gap-3">
               <Link to="/shop" className="inline-flex h-11 items-center rounded-sm bg-primary px-6 text-sm tracking-wide text-primary-foreground hover:opacity-90">

@@ -7,7 +7,7 @@ import { ProductCard } from "@/components/product-card";
 import { productImage } from "@/lib/product-images";
 
 const search = z.object({
-  category: z.enum(["tshirt", "shirt"]).optional(),
+  category: z.enum(["tshirt", "shirt", "shoes", "jeans"]).optional(),
 });
 
 export const Route = createFileRoute("/shop")({
@@ -40,12 +40,14 @@ function Shop() {
       <div className="mx-auto max-w-6xl px-5 pt-10">
         <div className="eyebrow">Shop</div>
         <h1 className="font-display mt-2 text-4xl md:text-5xl">
-          {category === "tshirt" ? "T-shirts" : category === "shirt" ? "Shirts" : "Everything"}
+          {category === "tshirt" ? "T-shirts" : category === "shirt" ? "Shirts" : category === "shoes" ? "Shoes" : category === "jeans" ? "Jeans" : "Everything"}
         </h1>
-        <nav className="mt-6 flex gap-6 text-sm">
+        <nav className="mt-6 flex flex-wrap gap-6 text-sm">
           <Link to="/shop" className="border-b border-transparent pb-1 data-[active=true]:border-foreground" data-active={!category}>All</Link>
           <Link to="/shop" search={{ category: "tshirt" }} className="border-b border-transparent pb-1 data-[active=true]:border-foreground" data-active={category === "tshirt"}>T-shirts</Link>
           <Link to="/shop" search={{ category: "shirt" }} className="border-b border-transparent pb-1 data-[active=true]:border-foreground" data-active={category === "shirt"}>Shirts</Link>
+          <Link to="/shop" search={{ category: "shoes" }} className="border-b border-transparent pb-1 data-[active=true]:border-foreground" data-active={category === "shoes"}>Shoes</Link>
+          <Link to="/shop" search={{ category: "jeans" }} className="border-b border-transparent pb-1 data-[active=true]:border-foreground" data-active={category === "jeans"}>Jeans</Link>
         </nav>
       </div>
 

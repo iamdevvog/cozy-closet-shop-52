@@ -23,6 +23,12 @@ export function SiteNav() {
           <Link to="/shop" search={{ category: "shirt" }} className="hover:opacity-60">
             Shirts
           </Link>
+          <Link to="/shop" search={{ category: "shoes" }} className="hover:opacity-60">
+            Shoes
+          </Link>
+          <Link to="/shop" search={{ category: "jeans" }} className="hover:opacity-60">
+            Jeans
+          </Link>
           <Link to="/orders" className="hover:opacity-60">
             Orders
           </Link>
@@ -69,6 +75,8 @@ export function SiteFooter() {
             <li><Link to="/shop">All</Link></li>
             <li><Link to="/shop" search={{ category: "tshirt" }}>T-shirts</Link></li>
             <li><Link to="/shop" search={{ category: "shirt" }}>Shirts</Link></li>
+            <li><Link to="/shop" search={{ category: "shoes" }}>Shoes</Link></li>
+            <li><Link to="/shop" search={{ category: "jeans" }}>Jeans</Link></li>
           </ul>
         </div>
         <div className="text-sm">
